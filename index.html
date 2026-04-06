@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio | Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left" style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/logo-iut.png" alt="Logo IUT de Blois" style="height: 40px; background: white; border-radius: 4px; padding: 2px;">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Eric<span>Gan Lyen</span></a></div>
+        </div>
+        <div class="nav-right" style="display: flex; align-items: center; gap: 30px;">
+        <ul>
+            <li><a href="index.html#home">Accueil</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <img src="images/logoRTnational.jpg" alt="Logo Réseaux & Télécoms" style="height: 40px; background: white; border-radius: 4px; padding: 2px;">
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1><span class="highlight">Eric Gan Lyen</span></h1>
+            <p>Étudiant en BUT - Réseaux et Télécommunications à l'IUT de BLois.</p> 
+            <p>Bienvenue sur mon portefolio où je partage mes compétences en infrastructure, réseaux et développement.</p>
+            <a href="#projects" class="btn">Découvrir mes projets</a>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Mes Réalisations</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="card-img" style="background: url('images/SAE3IOM03/logo_réseaux_multisite.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-info">
+                    <h3>SAÉ3.IOM.03 - concevoir un réseau multi-sites intégrant des objets connectés </h3>
+                    <p>Déploiement de l'architecture réseau d'un opérateur télécom avec coeurs IP/MPLS et service VPN.</p>
+                    <a href="projet1.html" class="link-btn">Voir l'étude de cas →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-img" style="background: url('images/SAE3IOM04/logo_objets_connectes.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-info">
+                    <h3>SAÉ3.IOM.04 - Découvrir et mettre en place un réseau IoT</h3>
+                    <p>Création d'une solution connectée complète, de la programmation des capteurs physiques à la supervision web.</p>
+                    <a href="projet2.html" class="link-btn">Voir l'étude de cas →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact-cta" style="text-align: center; padding: 80px 10%; background: #020c1b;">
+        <h2>Prêt à lancer votre projet ?</h2>
+        <p style="margin-bottom: 20px;">Vous avez une opportunité ou une question ? N'hésitez pas à m'envoyer un message via mon formulaire dédié !</p>
+        <a href="contact.html" class="btn" style="margin-bottom: 40px;">Aller vers la page Contact</a>
+        <p>Email: ganlyeneric@gmail.com</p>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/eric-gan-lyen/" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>

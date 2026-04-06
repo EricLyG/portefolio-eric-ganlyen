@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 2 | Détails</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left" style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/logo-iut.png" alt="Logo IUT de Blois" style="height: 40px; background: white; border-radius: 4px; padding: 2px;">
+            <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Eric<span>Gan Lyen</span></a></div>
+        </div>
+        <div class="nav-right" style="display: flex; align-items: center; gap: 30px;">
+            <ul>
+                <li><a href="index.html">Retour à l'accueil</a></li>
+            </ul>
+            <img src="images/logoRTnational.jpg" alt="Logo Réseaux & Télécoms" style="height: 40px; background: white; border-radius: 4px; padding: 2px;">
+        </div>
+    </nav>
+
+    <section class="project-detail">
+        <div class="detail-header">
+            <h1 class="highlight">Infrastructure IoT de Bout en Bout</h1>
+            <p class="subtitle">Découvrir et mettre en place un réseau IoT - SAÉ 3.IOM.04</p>
+        </div>
+
+        <div class="detail-content">
+            <div class="detail-text">
+                <h2>Le Contexte du Projet</h2>
+                <p>L'objectif de cette SAÉ était de concevoir un système connecté complet, allant de l'assemblage des composants électroniques 
+                    jusqu'à l'affichage des données sur une page web. Le projet s'articule autour de deux modules connectés : une station météo 
+                    et un radar de détection d'obstacles.</p>
+                
+                <h2>Phase 1 : Conception & Réalisation Matérielle</h2>
+                <p>J'ai d'abord modélisé l'architecture sur Fritzing pour planifier les connexions. Ensuite, je suis passé au câblage physique 
+                    sur plaques d'essai avec des microcontrôleurs <strong>ESP32</strong>, des capteurs de température/humidité (BME680, DS18B20), 
+                    un capteur à ultrasons et un servomoteur. Cette étape de réalisation concrète a exigé de la rigueur pour assurer 
+                    une bonne communication électronique.</p>
+
+                <h2>Phase 2 : Code & Remontée des Données</h2>
+                <p>Une fois le matériel opérationnel, j'ai développé les scripts embarqués permettant aux ESP32 de se connecter au réseau Wi-Fi 
+                    et de publier les données via le protocole <strong>MQTT</strong>. L'aboutissement du projet est un tableau de bord web qui souscrit 
+                    à ces données pour les afficher dynamiquement.</p>
+
+                <h2>Technologies Utilisées</h2>
+                <ul class="tech-list">
+                    <li>Microcontrôleurs ESP32 & Capteurs (Ultrasons, BME280, DS18B20)</li>
+                    <li>Programmation embarquée (C++ / MicroPython)</li>
+                    <li>Réseaux Wi-Fi & Protocole MQTT</li>
+                    <li>Interface Web (HTML/CSS)</li>
+                </ul>
+
+                <hr style="border: 0; border-top: 1px solid rgba(100, 255, 218, 0.2); margin: 30px 0;">
+                
+                <h2>Compétences & Validation</h2>
+                <ul style="list-style: none; margin-bottom: 30px; color: var(--grey);">
+                    <li style="margin-bottom: 10px;">
+                        <strong style="color: var(--white);">Compétences ciblées :</strong> Mettre en œuvre des applications et des protocoles sécurisés pour l'Internet des Objets, Gérer les infrastructures des réseaux mobiles.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong style="color: var(--white);">Apprentissages Critiques (AC) :</strong> Comprendre les architectures et spécificités des réseaux dédiées à l'IoT (AC24.01IOM), Intégrer des systèmes électroniques et des systèmes d'exploitation embarqués (AC25.01IOM).
+                    </li>
+                    <li>
+                        <strong style="color: var(--white);">Ressources mobilisées :</strong> R3.11 - Anglais professionnel 1, R3.IOM.16 - Introduction à l'IoT, R3.IOM.17 - Collecte et traitement de données issues IoT.
+                    </li>
+                </ul>
+                
+                <a href="index.html#projects" class="btn">Retour aux projets</a>
+            </div>
+            
+            <div class="detail-visual" style="display: flex; flex-direction: column; gap: 40px; background: transparent; border: none; height: auto;">
+                
+                <figure style="margin: 0;">
+                    <img src="images/SAE3IOM04/schema_cablage_station.png" alt="Schéma Fritzing du câblage de la station météo" style="width: 100%; border-radius: 10px; border: 1px solid rgba(100, 255, 218, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.3); background: rgba(255,255,255,0.05); padding: 15px;">
+                    <figcaption style="text-align: center; color: var(--grey); font-size: 0.9rem; margin-top: 10px; font-style: italic;">Conception : Schéma de câblage du module Station Météo.</figcaption>
+                </figure>
+
+                <figure style="margin: 0;">
+                    <img src="images/SAE3IOM04/schema_cablage_radar.png" alt="Schéma Fritzing du câblage du radar de détection" style="width: 100%; border-radius: 10px; border: 1px solid rgba(100, 255, 218, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.3); background: rgba(255,255,255,0.05); padding: 15px;">
+                    <figcaption style="text-align: center; color: var(--grey); font-size: 0.9rem; margin-top: 10px; font-style: italic;">Conception : Schéma de câblage du module Radar.</figcaption>
+                </figure>
+
+                <figure style="margin: 0;">
+                    <img src="images/SAE3IOM04/montage_SAE304.JPG" alt="Montage électronique réel" style="width: 100%; border-radius: 10px; border: 1px solid rgba(100, 255, 218, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <figcaption style="text-align: center; color: var(--grey); font-size: 0.9rem; margin-top: 10px; font-style: italic;">Réalisation : Mise en pratique des schémas et câblage physique complet du projet.</figcaption>
+                </figure>
+                
+                <figure style="margin: 0;">
+                    <img src="images/SAE3IOM04/visuel_finale.png" alt="Tableau de bord web IoT" style="width: 100%; border-radius: 10px; border: 1px solid rgba(100, 255, 218, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <figcaption style="text-align: center; color: var(--grey); font-size: 0.9rem; margin-top: 10px; font-style: italic;">Résultat logiciel : Tableau de bord web affichant les données MQTT en temps réel.</figcaption>
+                </figure>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

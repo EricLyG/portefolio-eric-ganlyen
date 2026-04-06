@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 1 | Détails</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left" style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/logo-iut.png" alt="Logo IUT de Blois" style="height: 40px; background: white; border-radius: 4px; padding: 2px;">
+            <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Eric<span>Gan Lyen</span></a></div>
+        </div>
+        <div class="nav-right" style="display: flex; align-items: center; gap: 30px;">
+            <ul>
+                <li><a href="index.html">Retour à l'accueil</a></li>
+            </ul>
+            <img src="images/logoRTnational.jpg" alt="Logo Réseaux & Télécoms" style="height: 40px; background: white; border-radius: 4px; padding: 2px;">
+        </div>
+    </nav>
+
+    <section class="project-detail">
+        <div class="detail-header">
+            <h1 class="highlight">Réseau Multi-sites Sécurisé</h1>
+            <p class="subtitle">Concevoir un réseau multi-sites intégrant des objets connectés - SAÉ3.IOM.03</p>
+        </div>
+
+        <div class="detail-content">
+            <div class="detail-text">
+                <h2>Le Contexte du Projet</h2>
+                <p>L'objectif de cette étude de cas était de simuler le déploiement complet d'un opérateur télécom fictif
+                    nommé "Blue". Pour être clair et progressif, le projet a été divisé en deux grandes phases : 
+                    l'infrastructure nationale (le coeur de réseau) et l'infrastructure locale (chez les clients).</p>
+                
+                <h2>Phase 1 : Le coeur de Réseau (Partie Publique)</h2>
+                <p>Nous avons d'abord interconnecté 4 grandes villes (Nantes, Bordeaux, Marseille, Lyon) en utilisant un 
+                    routage dynamique <strong>OSPF</strong>. L'enjeu était de créer une architecture robuste et tolérante
+                    aux pannes, capable de transporter les données des clients Grand Public et Professionnels de manière 
+                    isolée grâce à la technologie <strong>IP/MPLS</strong> et des <strong>VPN de niveau 2</strong>.</p>
+                
+                <h2>Phase 2 : Le Réseau Client (Partie Privée)</h2>
+                <p>Ensuite, nous avons plongé dans le réseau local d'un client professionnel type. Il a fallu configurer 
+                    le routeur d'entreprise et segmenter le trafic réseau avec des <strong>VLANs</strong> : une zone démilitarisée 
+                    (DMZ) pour sécuriser les serveurs visibles de l'extérieur (Web, DNS, Email), un LAN classique pour les employés, 
+                    un réseau Wi-Fi avec plusieurs SSID, et un réseau dédié à la téléphonie IP (ToIP).</p>
+
+                <h2>Technologies utilisées</h2>
+                <ul class="tech-list">
+                    <li>Routage avancé (OSPF, IP/MPLS)</li>
+                    <li>Commutation, VLANs & VPN L2</li>
+                    <li>Services (DHCP, DNS, HTTP, Email, ToIP)</li>
+                    <li>Simulation sur Cisco Packet Tracer</li>
+                </ul>
+
+                <hr style="border: 0; border-top: 1px solid rgba(100, 255, 218, 0.2); margin: 30px 0;">
+                <h2>Compétences & Validation</h2>
+                <ul style="list-style: none; margin-bottom: 30px; color: var(--grey);">
+                    <li style="margin-bottom: 10px;">
+                        <strong style="color: var(--white);"> Compétences Ciblées :</strong> Administter les réseaux et l'Internet, 
+                        Connecter les entreprises et les usagers, Gérer les infrastructures des réseaux mobiles, Mettre en œuvre des 
+                        applications et des protocoles sécurisés pour l’Internet des Objets.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong style="color: var(--white);">Apprentissages Critiques (AC) :</strong> Configurer et dépanner le routage dynamique dans un réseau (AC21.01), 
+                        Déployer des postes clients et des solutions virtualisées adaptées à une situation donnée (AC22.03), Intégrer des systèmes électroniques et des systèmes d’exploitation embarqué (AC25.01IOM).
+                    </li>
+                    <li >
+                        <strong style="color: var(--white);">Ressources mobilisées :</strong> R3.01 - Réseau de campus, R3.02 - Réseaux opérateurs, R3.03 - Services réseaux avancés.
+                    </li>
+                </ul>
+                <a href="index.html#projects" class="btn">Retour aux projets</a>
+            </div>
+
+            <div class="detail-visual" style="display: flex; flex-direction: column; gap: 40px; background: transparent; border: none; height: auto;">
+
+                <figure style="margin: 0;">
+                    <img src="images/SAE3IOM03/reseau_partie_public.png" alt="Topologie Coeur de Réseau (Publique)" style="width: 100%; border-radius: 10px; border: 1px solid rgba(100, 255, 218, 0.2); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
+                    <figcaption style="text-align: center; color: var(--grey); font-size: 0.9rem; margin-top: 10px; font-style: italic;">Phase 1 : Architecture multisites de l'opérateur "Blue" (Nantes, Bordeaux, Marseille, Lyon).</figcaption>
+                </figure>
+
+                <figure style="margin: 0;">
+                    <img src="images/SAE3IOM03/reseau_partie_privee.png" alt="Topologie Réseau Local (Privée)" style="width: 100%; border-radius: 10px; border: 1px solid rgba(100, 255, 218, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <figcaption style="text-align: center; color: var(--grey); font-size: 0.9rem; margin-top: 10px; font-style: italic;">Phase 2 : Architecture détaillée du réseau local d'un client professionnel.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

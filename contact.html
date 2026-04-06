@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left" style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/logo-iut.png" alt="Logo IUT de Blois" style="height: 40px; background: white; border-radius: 4px; padding: 2px;">
+            <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Eric<span>Gan Lyen</span></a></div>
+        </div>
+        <div class="nav-right" style="display: flex; align-items: center; gap: 30px;">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+                <li><a href="contact.html" class="highlight">Contact</a></li>
+            </ul>
+            <img src="images/logoRTnational.jpg" alt="Logo Réseaux & Télécoms" style="height: 40px; background: white; border-radius: 4px; padding: 2px;">
+        </div>
+    </nav>
+
+    <section class="contact-container">
+        <div class="contact-header">
+            <h1 class="highlight">On discute de votre projet ?</h1>
+            <p>Que ce soit pour une question ou juste pour dire bonjour, ma boîte mail est ouverte.</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="info-item">
+                    <h3>Email</h3>
+                    <p>ganlyeneric@gmail.com</p>
+                </div>
+                <div class="info-item">
+                    <h3>Réseaux</h3>
+                    <p>LinkedIn / GitHub / Instagram</p>
+                </div>
+                <div class="info-item">
+                    <h3>Localisation</h3>
+                    <p>Orléans, France</p>
+                </div>
+            </div>
+
+            <form id="my-contact-form" class="contact-form" action="https://formspree.io/f/mwvwypok" method="POST">
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" name="nom" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="votre@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" rows="5" placeholder="Parlez-moi de votre projet..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer le message</button>               
+                <p id="my-form-status" style="margin-top: 15px; text-align: center; font-weight: 600;"></p>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script>
+        var form = document.getElementById("my-contact-form");
+        var statusMessage = document.getElementById("my-form-status");
+
+        async function handleSubmit(event) {
+            event.preventDefault(); // Empêche la redirection classique
+            var data = new FormData(event.target);
+            
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Si ça marche : on affiche un message vert et on vide le formulaire
+                    statusMessage.innerHTML = "Merci pour votre message ! Je vous réponds très vite.";
+                    statusMessage.style.color = "var(--accent)"; // Couleur cyan de ton thème
+                    form.reset(); // MAGIE : vide tous les champs !
+                } else {
+                    // S'il y a une erreur
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            statusMessage.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            statusMessage.innerHTML = "Oups ! Un problème est survenu lors de l'envoi.";
+                        }
+                    })
+                    statusMessage.style.color = "red";
+                }
+            }).catch(error => {
+                statusMessage.innerHTML = "Oups ! Un problème est survenu.";
+                statusMessage.style.color = "red";
+            });
+        }
+        
+        form.addEventListener("submit", handleSubmit);
+    </script>
+
+</body>
+</html>
